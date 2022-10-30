@@ -34,6 +34,19 @@ namespace AddressBook
             personDetails.Add(person);
         }
 
+        public void MultiPersons()
+        {
+            AddPerson();
+            Console.Write("\n Do You Want To Add Another Contact (Y/N) :  ");
+            string choice = Console.ReadLine();
+            while (choice == "Y" || choice == "y")
+            {
+                AddPerson();
+                Console.Write("\nDo You Want To Add Another Contact (Y/N) :  ");
+                choice = Console.ReadLine();
+            }
+        }
+
         //Printing the address book details 
         public void Print()
         {
