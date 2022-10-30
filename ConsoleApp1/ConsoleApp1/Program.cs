@@ -10,7 +10,7 @@
             AddressBook person1 = new AddressBook();
             while (true)
             {
-                Console.WriteLine("Choose one operation to perform:\n 1-Add a Contact \n 2-View the AddressBook \n 3-Edit the Address Book \n 4-Exit from the Addressbook");
+                Console.WriteLine("Choose one operation to perform:\n 1-Add a Contact \n 2-View the AddressBook \n 3-Edit the Address Book \n 4-Delete the person \n 5-Exit from the Addressbook");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,6 +27,10 @@
                         Console.WriteLine("Enter any key to exit");
                         break;
                     case 4:
+                        person1.Delete();
+                        Console.WriteLine("Enter any key to exit");
+                        break;
+                    case 5:
                         return;
                     default:
                         Console.WriteLine("Please enter a valid input");
