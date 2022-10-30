@@ -32,5 +32,20 @@ namespace AddressBook
             person.email = Console.ReadLine();
             personDetails.Add(person);
         }
+        public void Print()
+        {
+            foreach (Contacts person in personDetails)
+            {
+                Console.WriteLine("---Address book details----");
+                Console.WriteLine("First Name:" + person.firstName);
+                Console.WriteLine("Last Name:" + person.lastName);
+                Console.WriteLine("Address:" + person.address);
+                Console.WriteLine("City:" + person.city);
+                Console.WriteLine("State:" + person.state);
+                Console.WriteLine("Zip:" + person.zip);
+                Console.WriteLine("Phone Number:" + person.phoneNumber);
+                Console.WriteLine("Email:" + person.email);
+            }
+        }
     }
 }
